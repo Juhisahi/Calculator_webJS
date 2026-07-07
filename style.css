@@ -5,69 +5,97 @@
     box-sizing: border-box;
 }
 
-
+html, body {
+    width: 100%;
+    height: 100%;
+}
 
 .container {
     width: 100%;
     height: 100vh;
-    background: #e3f9e3;
+    background: linear-gradient(135deg, #e3f9e3 0%, #d4f0ff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
-
-
 
 .calculator {
-    background: #3a4452;
-    padding: 20px;
-    border-radius: 10px;
+    background: linear-gradient(145deg, #2d3748, #1a202c);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
-
-
 
 .calculator form input {
     border: 0;
     outline: 0;
     width: 70px;
-    height: 50px;
-    border-radius: 5px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.1);
-    background: transparent;
+    height: 60px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #3a4758, #2c3544);
     font-size: 20px;
+    font-weight: 600;
     color: #fff;
     cursor: pointer;
-    margin: 10px;
-
-
-
+    margin: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 
+.calculator form input:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
 
+.calculator form input:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 form .display {
     display: flex;
     justify-content: flex-end;
-    margin: 20px 0;
+    margin: 0 0 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(51, 255, 216, 0.2);
 }
-
-
 
 form .display input {
     text-align: right;
     flex: 1;
-    font-size: 45px;
+    font-size: 48px;
+    font-weight: 700;
     box-shadow: none;
+    background: transparent;
+    color: #fff;
+    padding: 10px;
+    letter-spacing: 2px;
 }
 
-
+form .display input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
 
 form input.equal {
     width: 150px;
+    background: linear-gradient(145deg, #33ffd8, #00e5b8);
+    color: #1a202c;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(51, 255, 216, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
+form input.equal:hover {
+    box-shadow: 0 12px 28px rgba(51, 255, 216, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
 
+form input.equal:active {
+    box-shadow: 0 4px 12px rgba(51, 255, 216, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 form input.operator {
     color: #33ffd8;
+    font-weight: 700;
 }
